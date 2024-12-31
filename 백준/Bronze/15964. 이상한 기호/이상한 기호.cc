@@ -2,11 +2,11 @@
 #include <string>
 using namespace std;
 
-int calculate(int A, int B) {
+long long int calculate(long int A, long int B) {
     return (A+B)*(A-B);
 }
 int main(){
-    int A,B;
+    long int A,B;
     cin >> A >> B;
     cout << calculate(A,B);
     return 0;
