@@ -9,13 +9,11 @@ int main(){
         int H, W, N;
         cin >> H >> W >> N;
 
-        int floor = N%H;
-        int num = N/H+1;
-        if(floor==0) { 
-            floor = H;
-            num--;
+        if(N%H == 0) {
+            cout << H*100 + N/H << "\n";
+        }else {
+            cout << (N%H)*100 + N/H+1 << "\n";
         }
-        cout << floor*100 + num << "\n";
     }
 
     return 0;
