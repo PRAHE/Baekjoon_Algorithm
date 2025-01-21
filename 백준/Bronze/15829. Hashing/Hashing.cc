@@ -4,16 +4,15 @@ using namespace std;
 int main() {
     int L;
     cin >> L;
-    char c; int r=1;
-    int result=0;
+    char c; 
+    unsigned long long r=1;
+    unsigned long long result=0;
     for(int i=0; i<L; i++) {
         cin >> c;
-        int sum=1;
-        for(int j=0; j<i; j++) {
-            sum*=31;
-        }
-        result += (c-96)*sum;
+        result += ((c-96)*r) % 1234567891;
+        result %= 1234567891;
+        r = (r*31) % 1234567891;
     }
-    cout << result % 1234567891;
+    cout << result;
     return 0;
 }
