@@ -3,6 +3,8 @@
 using namespace std;
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     int L, P, V;
     int i=1;
     while(1) {
@@ -10,10 +12,11 @@ int main() {
         if(L==0&&P==0&&V==0) { return 0; }
         int day = V/P;
         int result;
-        if(V%P>=L) {
+        int remain = V%P;
+        if(remain>=L) {
             result = L*day + L;
-        }else if(V%P>=0) {
-            result = L*day + (V%P);
+        }else if(remain>=0) {
+            result = L*day + (remain);
         }
         cout << "Case " << i++ << ": " << result << "\n";
     }
