@@ -12,10 +12,8 @@ int main() {
         int result;
         if(V%P>=L) {
             result = L*day + L;
-        }else if(V%P>0) {
+        }else if(V%P>=0) {
             result = L*day + (V%P);
-        }else {
-            result = L*day;
         }
         cout << "Case " << i++ << ": " << result << "\n";
     }
